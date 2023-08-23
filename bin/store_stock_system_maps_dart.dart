@@ -6,7 +6,7 @@ void main(List<String> arguments) {
   Map storeProducts = {};
 while(true){
   print('Welcome to our products register System');
-  print('Enter product Name:');
+  print('Enter product Name or Enter \'e\' to exit :');
   String prdctname=stdin.readLineSync()!;
   if (prdctname == 'e') {
       break;
@@ -25,12 +25,13 @@ while(true){
   };
   storeProducts[prdctname]=regProduct;
 }
-print("\nStore Products:");
+print("Store Products:");
+print("-------------------------");
   storeProducts.forEach((prdctname, regProduct) {
     print("Product: ${regProduct['name']}");
     print("Category: ${regProduct['category']}");
     print("Brand: ${regProduct['brand']}");
-    print("Price: ${regProduct['price']}");
+    print("Price: ${regProduct['price']} OMR");
     print("-------------------------");
   });
 
